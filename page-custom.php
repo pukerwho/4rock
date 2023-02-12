@@ -1,16 +1,14 @@
 <?php 
 /*
-Template Name: BEST
+Template Name: CUSTOM
 */
-get_header(); 
-global $wp_query, $wp_rewrite;  
-$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+get_header();
+$custom_meta = carbon_get_the_post_meta('crb_page_custom_meta'); 
 $all_sites = new WP_Query( array(
   'post_type' => 'sites',
   'posts_per_page' => 30,
-  'orderby' => 'date',
-  'paged' => $current, 
-  'meta_key' => 'meta_site_rating_our',
+  'orderby' => 'rand',
+  'meta_key' => $custom_meta,
   'orderby' => 'meta_value_num',
 ));
 ?>
@@ -81,19 +79,6 @@ $all_sites = new WP_Query( array(
             <?php endwhile; endif; wp_reset_postdata(); ?>
           </tbody>
         </table>
-      </div>
-      <div class="b_pagination text-center mb-12">
-        <?php 
-          $big = 9999999991; // уникальное число
-          echo paginate_links( array(
-            'format' => '?paged=%#%',
-            'total' => $all_sites->max_num_pages,
-            'current' => $current,
-            'prev_next' => true,
-            'next_text' => (''),
-            'prev_text' => (''),
-          )); 
-        ?>
       </div>
     </div>
     <div class="w-full lg:w-1/4 lg:px-6">

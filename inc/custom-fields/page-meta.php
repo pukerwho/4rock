@@ -11,6 +11,12 @@ function crb_page_theme_options() {
     ->add_fields( array(
       Field::make( 'text', 'crb_page_cms', 'Назва CMS' ),
   ) );
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'page' )
+    ->where( 'post_template', 'IN', array('page-custom.php') )
+    ->add_fields( array(
+      Field::make( 'text', 'crb_page_custom_meta', 'Custom Meta (for sorting)' ),
+  ) );
 
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'page' )
