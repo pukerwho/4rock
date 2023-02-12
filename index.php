@@ -20,12 +20,13 @@
     'posts_per_page' => 10,
     'orderby' => 'rand',
   ));
+  
   ?>
   <div class="flex flex-wrap lg:-mx-4 mb-10">
     <div class="w-full lg:w-1/3 lg:px-4 mb-6 lg:mb-0 last-of-type:mb-0">
       <div class="bg-violet-50 rounded-lg p-4">
         <div class="inline-flex text-lg font-bold bg-violet-200 rounded-xl px-4 py-1 mb-4">🔥 <?php _e("Популярні сайти", "treba-wp"); ?></div>
-        <?php if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
+        <?php shuffle( $all_sites->posts ); if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
           <?php $current_id = get_the_ID(); ?>
           <div class="bg-white shadow-lg rounded-lg p-3 mb-3 last-of-type:mb-0">
             <div class="truncate font-extrabold mb-4">🔗 <?php the_title(); ?></div>
@@ -40,7 +41,7 @@
     <div class="w-full lg:w-1/3 lg:px-4 mb-6 lg:mb-0 last-of-type:mb-0">
       <div class="bg-green-50 rounded-lg p-4">
         <div class="inline-flex text-lg font-bold bg-green-200 rounded-xl px-4 py-1 mb-4">✔️ <?php _e("Нещодавно перевірені", "treba-wp"); ?></div>
-        <?php if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
+        <?php shuffle( $all_sites->posts ); if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
           <?php $current_id = get_the_ID(); ?>
           <div class="bg-white shadow-lg rounded-lg p-3 mb-3 last-of-type:mb-0">
             <div class="truncate font-extrabold mb-4">🔗 <?php the_title(); ?></div>
@@ -55,7 +56,7 @@
     <div class="w-full lg:w-1/3 lg:px-4 mb-6 lg:mb-0 last-of-type:mb-0">
       <div class="bg-yellow-50 rounded-lg p-4">
         <div class="inline-flex text-lg font-bold bg-yellow-200 rounded-xl px-4 py-1 mb-4">👍🏻 <?php _e("Наш вибір", "treba-wp"); ?></div>
-        <?php if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
+        <?php shuffle( $all_sites->posts ); if ($all_sites->have_posts()) : while ($all_sites->have_posts()) : $all_sites->the_post(); ?>
           <?php $current_id = get_the_ID(); ?>
           <div class="bg-white shadow-lg rounded-lg p-3 mb-3 last-of-type:mb-0">
             <div class="truncate font-extrabold mb-4">🔗 <?php the_title(); ?></div>
