@@ -4,6 +4,7 @@
     <li class="mb-2"><a href="/wordpress" class="text-gray-600 hover:text-blue-500">⚙️ WordPress</a></li>
     <li class="mb-2"><a href="/joomla" class="text-gray-600 hover:text-blue-500">⚙️ Joomla</a></li>
     <li class="mb-2"><a href="/prestashop" class="text-gray-600 hover:text-blue-500">⚙️ Prestashop</a></li>
+    <li class="mb-2"><a href="/opencart" class="text-gray-600 hover:text-blue-500">⚙️ OpenCart</a></li>
     <li class="mb-2"><a href="/horoshop" class="text-gray-600 hover:text-blue-500">⚙️ Хорошоп</a></li>
     <li class="mb-2"><a href="/prom" class="text-gray-600 hover:text-blue-500">⚙️ Prom</a></li>
     <li class="mb-2"><a href="/tilda" class="text-gray-600 hover:text-blue-500">⚙️ Tilda</a></li>
