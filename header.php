@@ -5,8 +5,8 @@
     $current_title = wp_get_document_title();
     if ( is_singular( 'sites' ) ) {
       $site_url = get_the_title();
-      $current_title = 'Безкоштовний аналіз сайту ' . $site_url . ': SEO-аудит';
-      $current_description = 'Аудит сайту ' . $site_url . '. Безкоштовно перевірити показники. SEO аналіз сайту. Все про сайт.';
+      $current_title = 'SEO-аналіз і аудит сайту ' . $site_url . ': оптимізація сайту';
+      $current_description = 'Технічні показники сайту ' . $site_url . '. Внутрішня оптимізація (перевірка сторінок). Зовнішня оптимізація сайту. Показники.';
     }
   ?>
   <title><?php echo $current_title; ?></title>
