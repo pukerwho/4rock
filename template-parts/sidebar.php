@@ -11,11 +11,34 @@
     <li><a href="/custom" class="text-gray-600 hover:text-blue-500">⚙️ Самописна</a></li>
   </ul>
   <div class="text-center text-xl text-gray-600 font-bold mb-4"><?php _e("Категорії", "treba-wp"); ?></div>
-  <ul>
+  <ul class="border-b border-gray-300 mb-4 pb-4">
     <li class="mb-2"><a href="/popular" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Популярні сайти", "treba-wp"); ?></a></li>
     <li class="mb-2"><a href="/rating" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Сайти з високою оцінкою", "treba-wp"); ?></a></li>
     <li class="mb-2"><a href="/expensive" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Дорогі сайти", "treba-wp"); ?></a></li>
     <li class="mb-2"><a href="/intresting" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Цікаві сайти", "treba-wp"); ?></a></li>
     <li><a href="/our" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Наш вибір", "treba-wp"); ?></a></li>
+  </ul>
+  <div class="text-center text-xl text-gray-600 font-bold mb-4"><?php _e("Зараз шукають", "treba-wp"); ?></div>
+  <ul>
+    <?php if ( is_home() ): ?>
+      <li class="mb-2"><a href="https://webgolovolomki.com/" class="text-gray-600 hover:text-blue-500">🖇️ WEB Головоломки</a></li>
+      <li class="mb-2"><a href="https://priazovka.com/" class="text-gray-600 hover:text-blue-500">🖇️ Приазовская правда</a></li>
+      <li class="mb-2"><a href="https://sdamkvartiry.com/" class="text-gray-600 hover:text-blue-500">🖇️ Сдам Квартиру</a></li>
+      <li class="mb-2"><a href="https://s-cast.ua/" class="text-gray-600 hover:text-blue-500">🖇️ S-cast</a></li>
+      <li class="mb-2"><a href="https://auto-future.land/" class="text-gray-600 hover:text-blue-500">🖇️ Автомобили Будущего</a></li>
+      <li class="mb-2"><a href="https://tarakan.org.ua/" class="text-gray-600 hover:text-blue-500">🖇️ Tarakan</a></li>
+      <li class="mb-2"><a href="https://treba-solutions.com/" class="text-gray-600 hover:text-blue-500">🖇️ Treba Solutions</a></li>
+      <li><a href="https://d-art.org.ua/" class="text-gray-600 hover:text-blue-500">🖇️ D-ART</a></li>
+    <?php else: ?>
+      <?php 
+        $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $super_links = super_links($current_url);
+        foreach ($super_links as $super_link):
+      ?>
+      <li class="mb-2 text-gray-600 hover:text-blue-500">
+        <?php echo $super_link->top_links; ?>
+      </li>
+      <?php endforeach; ?>
+    <?php endif; ?>  
   </ul>
 </div>
