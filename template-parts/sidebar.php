@@ -18,6 +18,13 @@
     <li class="mb-2"><a href="/intresting" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Цікаві сайти", "treba-wp"); ?></a></li>
     <li><a href="/our" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Наш вибір", "treba-wp"); ?></a></li>
   </ul>
+  <div class="text-center text-xl text-gray-600 font-bold mb-4"><?php _e("Цікаві статті", "treba-wp"); ?></div>
+  <div class="flex items-center border-b border-gray-300 mb-4 pb-4">
+    <div class="mr-2">
+      <img src="https://blog4rock.com/wp-content/uploads/2023/04/videonabljudenija.jpeg" class="w-[52px] min-w-[52px] h-[52px] min-h-[52px] object-cover rounded" loading="lazy" alt="Видеонаблюдение в частном доме">
+    </div>
+    <div><a href="https://icatalog.pro/12670-vazhnost-roli-videonabljudenija/" class="font-light text-gray-600 hover:text-blue-500">О важности роли видеонаблюдения</a></div>
+  </div>
   <div class="text-center text-xl text-gray-600 font-bold mb-4"><?php _e("Зараз шукають", "treba-wp"); ?></div>
   <ul>
     <?php if ( is_home() ): ?>
