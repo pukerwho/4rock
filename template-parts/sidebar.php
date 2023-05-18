@@ -19,7 +19,7 @@
     <li><a href="/our" class="text-gray-600 hover:text-blue-500">📌 <?php _e("Наш вибір", "treba-wp"); ?></a></li>
   </ul>
   <div class="text-center text-xl text-gray-600 font-bold mb-4"><?php _e("Цікаві статті", "treba-wp"); ?></div>
-  <div class="flex items-center border-b border-gray-300 mb-4 pb-4">
+  <div class="hidden items-center border-b border-gray-300 mb-4 pb-4">
     <div class="mr-2">
       <img src="https://blog4rock.com/wp-content/uploads/2023/05/about-cctv.jpeg" class="w-[52px] min-w-[52px] h-[52px] min-h-[52px] object-cover rounded" loading="lazy" alt="Видеонаблюдение в частном доме">
     </div>
@@ -32,6 +32,7 @@
       <li class="mb-2"><a href="https://priazovka.com/" class="text-gray-600 hover:text-blue-500">🖇️ Приазовская правда</a></li>
       <li class="mb-2"><a href="https://sdamkvartiry.com/" class="text-gray-600 hover:text-blue-500">🖇️ Сдам Квартиру</a></li>
       <li class="mb-2"><a href="https://s-cast.ua/" class="text-gray-600 hover:text-blue-500">🖇️ S-cast</a></li>
+      <li class="mb-2"><a href="https://icatalog.pro/" class="text-gray-600 hover:text-blue-500">🖇️ iCatalog</a></li>
       <li class="mb-2"><a href="https://auto-future.land/" class="text-gray-600 hover:text-blue-500">🖇️ Автомобили Будущего</a></li>
       <li class="mb-2"><a href="https://tarakan.org.ua/" class="text-gray-600 hover:text-blue-500">🖇️ Tarakan</a></li>
       <li class="mb-2"><a href="https://treba-solutions.com/" class="text-gray-600 hover:text-blue-500">🖇️ Treba Solutions</a></li>
