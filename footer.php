@@ -6,8 +6,11 @@
       <a href="<?php echo home_url(); ?>" class="bg-indigo-600 rounded-lg text-gray-200 text-xl px-3 py-1 mb-6">
         🤘 blog <span class="text-yellow-400"> for</span> rock
       </a>
+      <div class="mb-6">
+        © 2024. <?php _e("Всі права збережені", "treba-wp"); ?>
+      </div>
       <div>
-        © 2023. <?php _e("Всі права збережені", "treba-wp"); ?>
+        <a href="https://sviato.top/"><img src="https://blog4rock.com/wp-content/uploads/2024/05/sviato.jpeg" alt="Sviato.top" width="25"></a>
       </div>
     </div>
   </div>
